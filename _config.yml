@@ -1,0 +1,25 @@
+name: Shree Agrasen Academy
+url: http://shreeagrasenacademydbr.com/
+domain: shreeagrasenacademydbr.com
+
+permalink: pretty
+
+port: 80
+
+nav:
+- text: Home
+  url: /
+- text: About
+  url: /about/
+- text: Photo Gallery
+  url: /photo-gallery/
+- text: Faculty
+  url: /faculty/
+- text: Admissions
+  url: /admissions/
+- text: Students Corner
+  url: /students-corner/
+- text: Alumni
+  url: /alumni/
+- text: Contact
+  url: /contact/

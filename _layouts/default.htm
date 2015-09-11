@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>{% unless page.url == '/' %}{{page.title}} &middot; {% endunless %}{{site.name}}</title>
+<meta http-equiv="X-UA-Compatible" content="chrome=1">
+<link rel="stylesheet" href="/-/css/main.css" media="screen" />
+<link rel="stylesheet" href="/-/css/font.css" />
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" />
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
+<script>$(document).ready(function(){$(".fancybox").fancybox()})</script>
+<!--[if lt IE 9]>
+  <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+</head>
+<body>
+
+<header>
+  <div class="inner">
+    <a href="/"><h1>{{ site.name }}</h1></a>
+    <h5>CBSE Affiliation No : 230077  &middot;  School Code : 30051</h5>
+    <nav>
+      {% for item in site.nav %}
+        <a{% if item.url == page.url %} class="active"{% endif %} href="{{item.url}}">{{item.text}}</a>
+      {% endfor %}
+    </nav>
+  </div>
+</header>
+
+<section>
+  <div class="inner">
+    <h1 id="page_title">{{page.title}}</h1>
+    {{content}}
+    <br/>
+    <iframe src="http://www.facebook.com/plugins/likebox.php?href=https%3A%2F%2Fwww.facebook.com%2Fsaaschool&width=980&height=240&colorscheme=light&show_faces=true&stream=false&show_border=true&header=false&force_wall=false" scrolling="no" frameborder="0" style="border: none; overflow: hidden; width: 100%; height: 240px; background: #fff"></iframe>
+  </div>
+</section>
+
+<footer>
+  <div class="inner">
+    &copy; {{site.name}}
+  </div>
+</footer>
+
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-15889022-15', 'auto');
+ga('send', 'pageview');
+</script>
+</body>
+</html>

@@ -1,0 +1,10 @@
+---
+layout: default
+---
+
+<div class="gallery-images">
+    {% for image in page.gallery %}
+        {% capture img_url %}//i{% cycle '0', '1', '2' %}.wp.com/{{site.domain}}{{image}}{% endcapture %}
+        <a rel="gallery" class="fancybox" href="{{img_url}}"><img src="{{img_url}}?h={{page.image_height}}" alt="" style="height:{{page.image_height}}px" /></a>
+    {% endfor %}
+</div>
